@@ -17,7 +17,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the built files from the builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 # Provide a custom Nginx configuration to handle React Router (SPA)
 # We can just use default configuration, but SPA routing requires a fallback to index.html
