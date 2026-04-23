@@ -5,61 +5,88 @@ import { Plus, Calendar, Building2, Sparkles, ArrowUpRight } from 'lucide-react'
 
 const experiences = [
   {
-    company: 'GDSC Udinus',
-    role: 'Developer Community',
-    period: 'Nov 2023 - Nov 2025',
-    impact: 'Contributed to 5+ technical discussions across 4 collaborative projects.',
-    stack: ['Community', 'Workshops', 'Collaboration'],
+    company: 'PT Media Inovasi Strategis (GarudaLabs)',
+    role: 'Backend & DevOps Engineer',
+    location: 'Remote',
+    period: 'Feb 2026 - Apr 2026',
+    project: 'Haji Umroh Store',
+    impact: 'Membangun backend API, payment, shipping, object storage, dan CI/CD untuk platform e-commerce Haji & Umroh.',
+    stack: ['Golang', 'PostgreSQL', 'Redis', 'MinIO', 'Xendit', 'RajaOngkir', 'Docker', 'AWS'],
     description: [
-      'Actively participated in workshops, technical events, and collaborative learning sessions.',
-      'Contributed insights around development and analytics in community-driven projects.',
+      'Membangun backend API berbasis Golang untuk platform e-commerce Haji & Umroh milik pemerintah.',
+      'Mengintegrasikan Xendit payment gateway dan RajaOngkir untuk shipping workflow otomatis.',
+      'Mengelola PostgreSQL, Redis caching, dan object storage MinIO untuk performa tinggi.',
+      'Menyiapkan CI/CD pipeline dan production deployment ke cloud infrastructure.',
     ],
   },
   {
-    company: 'Blockvizo',
-    role: 'Data Analyst',
-    period: 'Jun 2024 - Jul 2025',
-    impact: 'Improved forecasting accuracy by 35% and cut analysis time by 40%.',
-    stack: ['Data Analysis', 'Dashboards', 'Web3 Analytics', 'Predictive Modeling'],
+    company: 'PT Media Inovasi Strategis (GarudaLabs)',
+    role: 'Backend Engineer',
+    location: 'Remote',
+    period: 'Des 2025 - Feb 2026',
+    project: 'Rewrite Web PMII',
+    impact: 'Rewrite legacy system ke backend Golang, migrasi database PostgreSQL, dan cloud deployment.',
+    stack: ['Golang', 'PostgreSQL', 'Docker', 'CI/CD', 'Cloud'],
     description: [
-      'Processed 50,000+ game hash history records to model item-drop probability behavior.',
-      'Built actionable dashboards for decentralized projects, enabling faster and more confident decisions.',
-      'Specialized in predictive airdrop and winning probability analysis across 10+ Web3 ecosystems.',
+      'Melakukan rewrite legacy web PMII dari sistem lama ke backend Golang yang modern dan scalable.',
+      'Migrasi database ke PostgreSQL dengan schema redesign untuk efisiensi query.',
+      'Menyiapkan containerized deployment menggunakan Docker dan CI/CD pipeline.',
+      'Production deployment ke cloud server dengan monitoring dan logging terintegrasi.',
     ],
   },
   {
-    company: 'ASAH (led by Dicoding x Accenture)',
-    role: 'Machine Learning Cohort',
-    period: 'Aug 2025 - Jan 2026',
-    impact: 'Served as project manager during the capstone phase and improved team execution by 70%.',
-    stack: ['Project Leadership', 'ML Product', 'React', 'Stakeholder Sync'],
+    company: 'Plex Seller',
+    role: 'Full Stack Developer',
+    location: 'Probation',
+    period: 'Okt 2025 · 1 Minggu',
+    impact: 'Mendapat exposure pada sistem ERP enterprise dengan message queue dan asynchronous architecture.',
+    stack: ['Express.js', 'TypeScript', 'React.js', 'RabbitMQ', 'Docker'],
     description: [
-      'Acted as project manager during capstone, leading a cross-functional team of 5 machine learning engineers and React developers.',
-      'Managed the development of a banking sales prediction portal to prioritize high-probability leads and reduce low-value outreach.',
-      'Coordinated timelines and technical workflows across functions to improve delivery speed and reliability.',
+      'Bergabung sebagai probation untuk sistem ERP berbasis Express.js, TypeScript, React.js, dan RabbitMQ.',
+      'Membangun modul chat internal dan mulai integrasi marketplace Lazada.',
+      'Mendapat exposure pada enterprise workflow, message queue, dan asynchronous architecture.',
+      'Resign setelah 1 minggu karena kondisi kesehatan.',
     ],
   },
   {
-    company: 'Programming Lab',
-    role: 'Lab Assistant',
-    period: 'Aug 2025 - Present',
-    impact: 'Mentored 110+ junior students through practical engineering sessions.',
-    stack: ['Teaching', 'Mentorship', 'Software Fundamentals'],
+    company: 'AFI Sport',
+    role: 'Full Stack Web Developer',
+    location: 'Kab. Bojonegoro, Jawa Timur · Freelance',
+    period: 'Jul 2025 - Agu 2025',
+    impact: 'Membangun modul pembayaran dan pengiriman untuk sistem e-commerce olahraga.',
+    stack: ['Laravel', 'MySQL', 'Midtrans', 'RajaOngkir'],
     description: [
-      'Assisted in 3+ weekly academic lab sessions for programming and software engineering courses.',
-      'Mentored around 110 junior students in problem solving, practical exercises, and core programming concepts.',
+      'Membangun modul pembayaran dan pengiriman untuk sistem e-commerce olahraga berbasis Laravel & MySQL.',
+      'Mengintegrasikan API Midtrans untuk proses transaksi dan API RajaOngkir untuk perhitungan ongkos kirim otomatis.',
+      'Mengoptimalkan proses checkout dan pelacakan pesanan agar lebih efisien dan responsif.',
     ],
   },
   {
-    company: 'PIJAK (led by Dicoding x IBM)',
-    role: 'AI Engineer Cohort',
-    period: 'Jan 2026 - Present',
-    impact: 'Selected participant in the PIJAK AI Engineer cohort.',
-    stack: ['Python', 'Generative AI', 'Deep Learning', 'AI Ethics'],
+    company: 'Alena Soccer',
+    role: 'Full Stack Web Developer',
+    location: 'Kab. Sidoarjo, Jawa Timur',
+    period: 'Feb 2025 - Jun 2025',
+    impact: 'Mengembangkan sistem reservasi lapangan futsal end-to-end menggunakan Laravel dan MySQL.',
+    stack: ['Laravel', 'MySQL', 'Midtrans', 'REST API'],
     description: [
-      'Joined an intensive AI Engineer cohort focused on Generative AI, Deep Learning, and AI Ethics.',
-      'Developing advanced AI solutions with Python and industry-standard practices from the IBM SkillsBuild curriculum.',
-      'Building capstone-ready systems for real-world AI implementation challenges.',
+      'Mengembangkan sistem reservasi lapangan futsal end-to-end menggunakan Laravel dan MySQL.',
+      'Mengintegrasikan QRIS Payment Midtrans, Point of Sales (POS), membership, dan laporan keuangan otomatis.',
+      'Mendesain RESTful API untuk komunikasi data antar modul admin dan kasir dengan autentikasi berbasis role.',
+      'Melaksanakan 113 skenario black-box testing dengan hasil 100% sesuai spesifikasi.',
+    ],
+  },
+  {
+    company: 'Badan Pengawas Pemilu Kota Surabaya',
+    role: 'Full Stack Web Developer & Team Lead',
+    location: 'Kota Surabaya, Jawa Timur · Magang',
+    period: 'Jul 2024 - Agu 2024',
+    impact: 'Membangun sistem E-Library internal berbasis Node.js, Vue.js, dan MySQL untuk Bawaslu.',
+    stack: ['Node.js', 'Vue.js', 'MySQL', 'OwnCloud', 'Scrum'],
+    description: [
+      'Membangun sistem E-Library internal berbasis Node.js, Vue.js, dan MySQL yang terintegrasi dengan OwnCloud untuk manajemen dokumen.',
+      'Merancang Rest API internal untuk akses data dokumen dan laporan kegiatan antar departemen.',
+      'Menerapkan Agile Scrum dan memimpin tim kecil dari analisis kebutuhan hingga deployment.',
+      'Berhasil mempercepat proses pengelolaan dokumen dan meningkatkan transparansi organisasi.',
     ],
   },
 ];
@@ -70,7 +97,7 @@ function getStartYear(period) {
 }
 
 const ExperienceItem = ({ experience, isExpanded, onToggle, index }) => {
-  const isCurrent = /present/i.test(experience.period);
+  const isCurrent = index === 0; // most recent entry is always first
 
   return (
     <article className="relative min-w-0">
@@ -96,6 +123,11 @@ const ExperienceItem = ({ experience, isExpanded, onToggle, index }) => {
                     Active Now
                   </span>
                 )}
+                {experience.project && (
+                  <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-black/45 border border-black/[0.1] px-2.5 py-1 rounded-[2px]">
+                    {experience.project}
+                  </span>
+                )}
               </div>
 
               <h3 className="text-[24px] md:text-[30px] lg:text-[34px] font-black uppercase tracking-[-0.02em] leading-[0.95] text-black">
@@ -106,6 +138,11 @@ const ExperienceItem = ({ experience, isExpanded, onToggle, index }) => {
                 <Building2 className="w-3.5 h-3.5" />
                 {experience.company}
               </p>
+              {experience.location && (
+                <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.14em] text-black/30 pl-[19px]">
+                  {experience.location}
+                </p>
+              )}
 
               <p className="mt-5 text-sm md:text-[15px] font-light leading-relaxed text-black/60 max-w-3xl">
                 {experience.impact}
@@ -205,7 +242,7 @@ const ProfessionalExperience = () => {
             </h2>
 
             <p className="mt-5 text-[14px] md:text-[15px] font-light leading-[1.8] text-black/60 max-w-[320px]">
-              Selected roles across AI cohorts, data analytics, and mentoring. Each step adds stronger delivery habits, leadership, and product clarity.
+              Pengalaman kerja yang berfokus pada Full Stack Web Development, Backend Engineering, API Development, dan production deployment di berbagai environment.
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-2.5">

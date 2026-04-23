@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState, useRef, useEffect, useCallback } from "react";
 import { X, Terminal, Copy, Check } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { streamCerebras } from "../services/cerebras";
+import { streamGemini } from "../services/gemini";
 import { resolveAction, detectOffTopic, detectLanguage } from "../services/intentRouter";
 import { sanitizeAssistantResponse } from '../services/responseSanitizer';
 import { ACTION_TO_ELEMENT } from "../data/sectionRegistry";
@@ -29,7 +29,7 @@ const COMMANDS = {
             "  clear      Clear terminal",
             "  ──────────────────────────────",
             "",
-            "  Or just ask me anything about Zickrian!"
+            "  Or just ask me anything about Rizky!"
         ].join('\n')
     },
     ls: {
@@ -60,7 +60,7 @@ const COMMANDS = {
             }
             return [
                 "        ╭──────────────────────╮",
-                "  ⣿⣿    │  zickrian@portfolio   │",
+                "  ⣿⣿    │   rizky@portfolio    │",
                 "  ⣿⣿    ╰──────────────────────╯",
                 "  ⣿⣿    ─────────────────────────",
                 `  ⣿⣿    Name     : ${p.name}`,
@@ -175,7 +175,7 @@ const ChatWidget = ({ isOpen: controlledIsOpen, onOpenChange }) => {
     const isOpen = controlledIsOpen ?? internalIsOpen;
     const setIsOpen = onOpenChange ?? setInternalIsOpen;
     const [messages, setMessages] = useState([
-        { type: 'bot', text: "System Online. I'm Zickrian's AI Assistant. Type `help` for commands, or ask me anything!" }
+        { type: 'bot', text: "System Online. I'm Rizky's AI Assistant. Type `help` for commands, or ask me anything!" }
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isTyping, setIsTyping] = useState(false);
@@ -397,7 +397,7 @@ const ChatWidget = ({ isOpen: controlledIsOpen, onOpenChange }) => {
 
             // Stream and collect the full response
             let fullText = "";
-            for await (const chunk of streamCerebras(apiMessages)) {
+            for await (const chunk of streamGemini(apiMessages)) {
                 fullText += chunk;
             }
 
@@ -481,7 +481,7 @@ const ChatWidget = ({ isOpen: controlledIsOpen, onOpenChange }) => {
                                 <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                                 <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
                             </div>
-                            <span className="ml-2 text-neutral-400 text-xs">zickrian_bot - -bash</span>
+                            <span className="ml-2 text-neutral-400 text-xs">rizky_bot - -bash</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="text-neutral-600 text-[10px] hidden md:inline">Ctrl+K</span>

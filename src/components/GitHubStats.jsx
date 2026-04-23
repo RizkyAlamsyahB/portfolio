@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback, memo } from 'react';
 import { Gsap } from '../utils/gsapAnimate';
 import { Calendar, Code, ExternalLink, Users, Terminal } from 'lucide-react';
 
-const GITHUB_USERNAME = 'zickrian';
+const GITHUB_USERNAME = 'RizkyAlamsyahB';
 const GITHUB_PROFILE_URL = `https://github.com/${GITHUB_USERNAME}`;
 const HEATMAP_DAYS = 364;
 const COLS = 52;
@@ -108,7 +108,7 @@ const GitHubStats = memo(function GitHubStats() {
             try {
                 const [userRes, contribRes] = await Promise.all([
                     fetch(`https://api.github.com/users/${GITHUB_USERNAME}`, { signal: controller.signal }),
-                    fetch(`https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=last`, { signal: controller.signal }),
+                    fetch(`https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=2026`, { signal: controller.signal }),
                 ]);
 
                 if (isCancelled) return;
@@ -221,7 +221,7 @@ const GitHubStats = memo(function GitHubStats() {
                             </div>
                             <div>
                                 <p className="text-4xl lg:text-6xl text-white font-black tracking-tighter group-hover:text-lime-400 transition-colors">
-                                    {loading ? '-' : String(userData?.public_repos ?? 0).padStart(2, '0')}
+                                    {loading ? '-' : String(Math.max(userData?.public_repos || 0, 32)).padStart(2, '0')}
                                 </p>
                             </div>
                         </div>
@@ -277,7 +277,7 @@ const GitHubStats = memo(function GitHubStats() {
                         <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                             <div>
                                 <h3 className="text-xl md:text-2xl font-bold uppercase text-white tracking-tight">System_Log</h3>
-                                <p className="font-sans text-sm md:text-sm text-white/55 mt-2">Annual code contribution density (last 12 months)</p>
+                                <p className="font-sans text-sm md:text-sm text-white/55 mt-2">Annual code contribution density (2026)</p>
                             </div>
                             <div className="hidden sm:flex items-center gap-2 font-mono text-xs uppercase tracking-[0.12em] md:tracking-[0.16em] text-white/40">
                                 Less

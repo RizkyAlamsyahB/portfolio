@@ -1,5 +1,6 @@
+import { useRef, useState, useEffect } from "react";
 import { Gsap } from "../../utils/gsapAnimate";
-import { ArrowUpRight, Github, Globe } from "lucide-react";
+import { ArrowUpRight, Github, Globe, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Helper: inject Cloudinary automatic format & quality + width
 function cloudinarySrc(originalUrl, width) {
@@ -27,6 +28,15 @@ export default function ProjectCaseLayout({
   preFeatureSection,
   mode,
 }) {
+  const scrollRef = useRef(null);
+
+  const handleScroll = (direction) => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      scrollRef.current.scrollBy({ left: direction === 'left' ? -clientWidth : clientWidth, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className={`bg-[#FAF9F6] text-black font-sans selection:bg-lime-400 selection:text-black overflow-x-hidden ${mode === 'page' ? 'min-h-screen' : 'h-full flex flex-col'}`}>
 
@@ -101,30 +111,64 @@ export default function ProjectCaseLayout({
           </Gsap.div>
         </section>
 
-        {/* ── Main Cover Image ──────────────────────── */}
-        {project.heroImg && (
+        {/* ── Main Cover Image / Carousel ──────────────────────── */}
+        {(project.images?.length > 0 || project.heroImg) && (
           <section className="px-6 md:px-10 pb-16">
             <Gsap.div
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="max-w-5xl mx-auto border border-black/5 p-2 bg-white rounded-lg shadow-sm"
+              className="max-w-5xl mx-auto relative group"
             >
-              <div className="w-full bg-neutral-100/50 rounded-[4px] overflow-hidden aspect-video relative flex items-center justify-center border border-black/5">
-                <img
-                  src={cloudinarySrc(project.heroImg, 1200)}
-                  srcSet={[
-                    cloudinarySrc(project.heroImg, 600) + ' 600w',
-                    cloudinarySrc(project.heroImg, 900) + ' 900w',
-                    cloudinarySrc(project.heroImg, 1200) + ' 1200w',
-                  ].join(', ')}
-                  sizes="(max-width: 768px) 100vw, 1152px"
-                  alt={project.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-contain"
-                />
+              {project.images?.length > 1 && (
+                <>
+                  <button
+                    onClick={() => handleScroll('left')}
+                    className="absolute left-2 md:-left-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-black p-2 md:p-3 rounded-full shadow-lg border border-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"
+                  >
+                    <ChevronLeft size={24} />
+                  </button>
+                  <button
+                    onClick={() => handleScroll('right')}
+                    className="absolute right-2 md:-right-4 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-black p-2 md:p-3 rounded-full shadow-lg border border-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"
+                  >
+                    <ChevronRight size={24} />
+                  </button>
+                </>
+              )}
+              
+              <div 
+                ref={scrollRef}
+                className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scroll-smooth"
+              >
+                {(project.images || [project.heroImg]).map((imgSrc, idx) => (
+                  <div key={idx} className="shrink-0 w-full snap-center border border-black/5 p-2 bg-white rounded-lg shadow-sm relative">
+                    <div className="w-full bg-neutral-100/50 rounded-[4px] overflow-hidden aspect-video relative flex items-center justify-center border border-black/5">
+                      <img
+                        src={cloudinarySrc(imgSrc, 1200)}
+                        srcSet={[
+                          cloudinarySrc(imgSrc, 600) + ' 600w',
+                          cloudinarySrc(imgSrc, 900) + ' 900w',
+                          cloudinarySrc(imgSrc, 1200) + ' 1200w',
+                        ].join(', ')}
+                        sizes="(max-width: 768px) 100vw, 1152px"
+                        alt={`${project.title} screenshot ${idx + 1}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
+              {/* Optional indicator dots if multiple images */}
+              {project.images?.length > 1 && (
+                <div className="flex justify-center gap-2 mt-2">
+                  {project.images.map((_, idx) => (
+                    <div key={idx} className="w-2 h-2 rounded-full bg-black/20" />
+                  ))}
+                </div>
+              )}
             </Gsap.div>
           </section>
         )}

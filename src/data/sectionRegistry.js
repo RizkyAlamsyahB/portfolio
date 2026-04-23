@@ -96,6 +96,16 @@ export const SECTION_REGISTRY = [
     ],
   },
   {
+    id: 'scroll_to_certifications',
+    label: 'Certifications / Credentials',
+    elementId: 'certifications-section',
+    synonyms: [
+      'sertifikat', 'sertifikasi', 'certifications', 'credentials',
+      'lisensi', 'license', 'bnsp', 'certified',
+      'certificate', 'achievement', 'badge',
+    ],
+  },
+  {
     id: 'scroll_to_contact',
     label: 'Contact / Footer',
     elementId: 'contact-section',

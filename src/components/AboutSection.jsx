@@ -7,29 +7,20 @@ const HackathonDetailModal = lazy(() => import('./HackathonDetailModal'));
 /* ─────────────────────────────────────────
    Static data
    ───────────────────────────────────────── */
-const achievements = [
-  {
-    icon: Trophy,
-    rank: 'National',
-    category: 'Hackathon',
-    title: 'National Finalist',
-    event: 'Base Indonesia Hackathon 2025',
-    year: '2025',
-    description: 'Competed against top engineering teams nationwide, building a decentralized solution on the Base blockchain.',
-  },
-];
+const achievements = [];
 
 const STATS = [
-  { value: 'BUILD', label: 'Hands-on\nApproach' },
-  { value: 'AI+WEB', label: 'Product\nStack' },
+  { value: '8+', label: 'Real\nProjects' },
+  { value: '30+', label: 'Tech &\nTools' },
   { value: 'OPEN', label: 'To\nCollab' },
 ];
 
 const CAPABILITIES = [
-  'Machine Learning / CV',
-  'Generative AI & LLMs',
-  'Full-Stack Delivery',
-  'Data Engineering',
+  'Full Stack Web Development',
+  'Backend API Engineering',
+  'DevOps & Deployment',
+  'Payment Gateway Integration',
+  'Database & Migration',
 ];
 
 /* ─────────────────────────────────────────
@@ -173,7 +164,7 @@ const AboutSection = memo(function AboutSection() {
                   <source srcSet="/profilee.webp" type="image/webp" />
                   <img
                     src="/profilee.webp"
-                    alt="Firdaus Zickrian"
+                    alt="Rizky Alamsyah"
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover object-top grayscale-[25%] group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
@@ -183,7 +174,7 @@ const AboutSection = memo(function AboutSection() {
                 {/* Name plate at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 px-5 pt-10 pb-4 bg-gradient-to-t from-black/65 via-black/30 to-transparent z-20">
                   <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-white/50 mb-0.5">Name</p>
-                  <p className="text-white font-bold text-[15px] tracking-wide leading-snug">Firdaus Zickrian</p>
+                  <p className="text-white font-bold text-[15px] tracking-wide leading-snug">Rizky Alamsyah</p>
                 </div>
 
                 {/* Corner brackets */}
@@ -207,7 +198,7 @@ const AboutSection = memo(function AboutSection() {
                 <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-black/32 mb-1.5">Location</p>
                 <div className="flex items-center gap-1.5">
                   <MapPin size={11} className="text-black/38 shrink-0" />
-                  <span className="text-[13px] font-bold text-black">Indonesia</span>
+                  <span className="text-[13px] font-bold text-black">Sidoarjo, Indonesia</span>
                 </div>
               </div>
             </div>
@@ -238,17 +229,17 @@ const AboutSection = memo(function AboutSection() {
             >
               {/* Eyebrow */}
               <p className="font-mono text-[9px] uppercase tracking-[0.28em] text-black/30 mb-5">
-                Based in Indonesia — Open to Work
+                Based in Sidoarjo — Open to Work
               </p>
 
               {/* Main title */}
               <h2 className="font-display font-bold tracking-[-0.025em] leading-[1.08] text-black">
                 <span className="block text-[44px] sm:text-[56px] lg:text-[64px] xl:text-[72px]">
-                  AI Engineer
+                  Full Stack
                 </span>
 
                 <span className="block text-[22px] sm:text-[26px] lg:text-[30px] xl:text-[34px] font-medium tracking-[-0.01em] text-black/55 mt-2">
-                  with Full-Stack Product Delivery
+                  Backend-Focused Web Developer
                 </span>
               </h2>
             </Gsap.div>
@@ -263,7 +254,7 @@ const AboutSection = memo(function AboutSection() {
             >
 
               <span className="font-mono text-[10px] md:text-[10.5px] uppercase tracking-[0.2em] text-black/35">
-                Computer Vision · LLM Systems · Full-Stack Delivery
+                Golang · Node.js · Laravel · PostgreSQL · Docker
               </span>
             </Gsap.div>
 
@@ -276,10 +267,10 @@ const AboutSection = memo(function AboutSection() {
               className="space-y-4 text-[15px] md:text-[15.5px] font-light text-black/60 leading-[1.88] max-w-[580px]"
             >
               <p>
-                I'm <strong className="text-black font-semibold">Firdaus Zickrian</strong>, an AI Engineer focused on building intelligent systems that are not only innovative, but production-ready and measurable in real-world environments.
+                I'm <strong className="text-black font-semibold">Rizky Alamsyah Bimantara</strong>, a Full Stack Web Developer focused on backend engineering and production-ready systems. Fresh graduate Sistem Informasi from UPN "Veteran" Jawa Timur with GPA 3.73.
               </p>
               <p>
-                I specialize in Computer Vision and LLM-powered products, with full-stack delivery as a supporting strength to move ideas from prototype to reliable digital products.
+                My stack spans Golang, Node.js, Laravel, PostgreSQL, Redis, Docker, and cloud deployments. I've worked on government projects, ERP systems, e-commerce platforms, and payment integrations — from API engineering to full DevOps setup.
               </p>
             </Gsap.div>
 

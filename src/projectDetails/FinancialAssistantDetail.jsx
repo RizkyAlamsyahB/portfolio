@@ -29,8 +29,8 @@ export const project = {
     "Helps users make better financial decisions through accurate spending data analysis.",
   ],
   links: {
-    live: "https://t.me/zickrian_bot",
-    repo: "https://github.com/zickrian/Accounting-Assistant",
+    live: "https://t.me/rizky_bot",
+    repo: "https://github.com/RizkyAlamsyahB/Accounting-Assistant",
   },
 };
 

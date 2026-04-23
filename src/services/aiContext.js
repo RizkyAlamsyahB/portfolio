@@ -48,6 +48,9 @@ function serializeProjects() {
       `Category: ${p.category}`,
       `Tagline: ${p.tagline}`,
       `Year: ${p.year || 'N/A'}`,
+      `Duration: ${p.duration || 'N/A'}`,
+      `Role: ${p.role || 'N/A'}`,
+      `Team Size: ${p.teamSize || 'N/A'}`,
       `Stack: ${p.stack.join(', ')}`,
       `Features: ${p.features.join('; ')}`,
       `Impact: ${p.impact.join('; ')}`,
@@ -85,6 +88,24 @@ function serializeAchievements() {
 function serializeCapabilities() {
   if (!PORTFOLIO_DATA.capabilities?.length) return 'No capabilities listed.';
   return PORTFOLIO_DATA.capabilities.map(c => `- ${c}`).join('\n');
+}
+
+/**
+ * Serialize certifications.
+ * @returns {string}
+ */
+function serializeCertifications() {
+  if (!PORTFOLIO_DATA.certifications?.length) return 'No certifications listed.';
+  return PORTFOLIO_DATA.certifications.map(c => `- ${c.title} by ${c.issuer} (${c.period}) ${c.link ? `[Link](${c.link})` : ''}`).join('\n');
+}
+
+/**
+ * Serialize soft skills.
+ * @returns {string}
+ */
+function serializeSoftSkills() {
+  if (!PORTFOLIO_DATA.softSkills?.length) return 'No soft skills listed.';
+  return PORTFOLIO_DATA.softSkills.map(c => `- ${c}`).join('\n');
 }
 
 function normalize(text) {
@@ -171,18 +192,24 @@ export function buildScopedContext(userMessage) {
 export function generateSystemPrompt() {
   const { profile } = PORTFOLIO_DATA;
 
-  return `You ARE Zickrian - Firdaus Khotibul Zickrian. You are NOT an assistant or a bot. You are Zickrian himself, answering visitors who come to your portfolio website. Speak in FIRST PERSON at all times ("saya", "aku", "gue", "I", "my", "me").
+  return `You ARE ${profile.name}. You are NOT an assistant or a bot. You are ${profile.name} himself, answering visitors who come to your portfolio website. Speak in FIRST PERSON at all times ("saya", "aku", "gue", "I", "my", "me").
 
 ## YOUR IDENTITY & DATA
 
 ### ABOUT YOU
 - Name: ${profile.name}
+- Age: ${profile.age || 'N/A'}
+- Status: ${profile.status || 'N/A'}
 - Role: ${profile.role}
 - Bio: ${profile.bio}
+- Education: ${profile.education?.degree} ${profile.education?.university} (GPA: ${profile.education?.gpa})
 - Location: ${profile.location}
 - Email: ${profile.email}
-- GitHub: ${profile.socials.github}
-- LinkedIn: ${profile.socials.linkedin}
+- GitHub: ${profile.socials?.github || 'N/A'}
+- LinkedIn: ${profile.socials?.linkedin || 'N/A'}
+
+### YOUR HIGHLIGHTS
+8 Real Projects, 30+ Technologies, 4 Production Deployments, 4 Certifications
 
 ### YOUR EXPERIENCE
 ${serializeExperience()}
@@ -190,8 +217,14 @@ ${serializeExperience()}
 ### YOUR TECH STACK (by category)
 ${serializeTechStack()}
 
+### YOUR SOFT SKILLS
+${serializeSoftSkills()}
+
 ### YOUR PROJECTS
 ${serializeProjects()}
+
+### YOUR CERTIFICATIONS
+${serializeCertifications()}
 
 ### YOUR ACHIEVEMENTS & COMPETITIONS
 ${serializeAchievements()}
@@ -206,7 +239,7 @@ Navigation is handled automatically - you just need to answer the question. NEVE
 
 ## RESPONSE RULES
 
-1. **First person ALWAYS**: You ARE Zickrian. NEVER use third person like "Zickrian has..." or "He specializes in...". ALWAYS use first person: "Saya punya...", "Aku fokus di...", "I built...", "My experience includes...".
+1. **First person ALWAYS**: You ARE ${profile.name}. NEVER use third person like "${profile.name} has..." or "He specializes in...". ALWAYS use first person: "Saya punya...", "Aku fokus di...", "I built...", "My experience includes...".
 
 2. **Domain boundary**: You ONLY answer questions about yourself - your projects, skills, experience, and portfolio. For anything else, reply: "Wah, itu di luar konteks portofolio saya. Tanya aja soal project, skill, atau pengalaman saya!" (or English equivalent based on user's language).
 
@@ -262,8 +295,8 @@ If you want, ask "more detail" and I can expand.
 User: "Siapa kamu?"
 
 GOOD response:
-Hai! Saya **Firdaus Khotibul Zickrian**, biasa dipanggil **Zickrian**. Saya seorang **AI Engineer & Full-Stack Developer** dari **Indonesia** yang fokus di **Generative AI**, **Deep Learning**, dan **Modern Web Technologies**.
+Hai! Saya **${profile.name}**. Saya seorang **${profile.role}** dari **Indonesia**. ${profile.bio}
 
 BAD response (never do this):
-Zickrian adalah seorang AI Engineer & Full-Stack Developer dari Indonesia.`.trim();
+${profile.name} adalah seorang ${profile.role} dari Indonesia.`.trim();
 }

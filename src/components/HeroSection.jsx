@@ -232,7 +232,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
             transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="text-[clamp(4.25rem,14vw,9rem)] font-black uppercase tracking-tight text-black leading-[0.88]"
           >
-            FIRDAUS
+            RIZKY
           </Gsap.h1>
 
           <Gsap.h1
@@ -241,7 +241,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
             transition={{ duration: 0.75, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="text-[clamp(4.25rem,14vw,9rem)] font-black uppercase tracking-tight text-transparent leading-[0.88] mt-2 sm:mt-0 font-outline-fallback"
           >
-            ZICKRIAN
+            ALAMSYAH
           </Gsap.h1>
 
           {/* Right Decoration */}
@@ -256,11 +256,11 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
           transition={{ delay: 0.38, duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center gap-2 mt-0"
         >
-          <h2 className="text-[clamp(1.35rem,4.2vw,2.25rem)] font-bold text-black/80 tracking-tight flex items-center justify-center flex-wrap gap-2 px-2">
-            Architecting <span className="bg-lime-400/30 px-2 rounded-md ring-1 ring-lime-500/20">Intelligent</span> Paradigms<span className="text-lime-500 font-extrabold -ml-1">.</span>
+          <h2 className="text-[clamp(1.35rem,4.2vw,2.25rem)] font-bold text-black/80 tracking-tight flex items-center justify-center flex-wrap gap-2 px-2 text-center">
+            From API to <span className="bg-lime-400/30 px-2 rounded-md ring-1 ring-lime-500/20">Deployment</span> - Building Systems That Work<span className="text-lime-500 font-extrabold -ml-1">.</span>
           </h2>
-          <p className="font-sans text-base text-black/60 max-w-xl leading-7 mt-2 px-4">
-            AI Engineer & Full-Stack Developer specializing in high-performance, scalable systems.
+          <p className="font-sans text-base text-black/60 max-w-xl text-center leading-7 mt-2 px-4">
+            Backend-focused Full Stack Developer passionate about building production-ready systems.
           </p>
         </Gsap.div>
 

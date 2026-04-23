@@ -1,157 +1,208 @@
 export const PORTFOLIO_DATA = {
     profile: {
-        name: "Firdaus Khotibul Zickrian",
-        role: "AI Engineer & Full-Stack Developer",
-        bio: "Passionate about building intelligent systems that learn, adapt, and solve complex problems. Specializing in Generative AI, Deep Learning, and Modern Web Technologies.",
-        location: "Indonesia",
-        email: "firdauskhotibulzickrian@gmail.com",
+        name: "Rizky Alamsyah Bimantara",
+        role: "Full Stack Web Developer",
+        bio: "Backend-focused Full Stack Developer passionate about building production-ready systems. Experienced in Golang, Node.js, Laravel, PostgreSQL, Redis, Docker, and cloud deployment. Comfortable across the stack from API engineering to DevOps.",
+        location: "Sidoarjo, Jawa Timur, Indonesia",
+        email: "rizkyalamsyah.dev@gmail.com",
+        phone: "+62 878-4017-7803",
+        age: 23,
+        status: "Available",
+        education: {
+            degree: "S1 Sistem Informasi",
+            university: "Universitas Pembangunan Nasional \"Veteran\" Jawa Timur",
+            gpa: "3.73"
+        },
         socials: {
-            github: "https://github.com/zickrian",
-            linkedin: "https://linkedin.com/in/firdauskhotibulzickrian/"
+            github: "https://github.com/RizkyAlamsyahB",
+            whatsapp: "https://wa.link/k7ks3m"
         }
     },
     experience: [
         {
-            title: "Google Developer Student Club - Universitas Dian Nuswantoro",
-            period: "Nov 2023 - Nov 2025",
+            title: "Backend & DevOps Engineer — PT Media Inovasi Strategis (GarudaLabs) · Haji Umroh Store",
+            period: "Feb 2026 – Apr 2026 · Remote",
             description: [
-                "Actively participating in developer community events, workshops, and collaborative study sessions.",
-                "Contributed to 5+ community discussions across 4 projects, sharing insights on development and analytics."
+                "Membangun backend API berbasis Golang untuk platform e-commerce Haji & Umroh milik pemerintah.",
+                "Mengintegrasikan Xendit payment gateway dan RajaOngkir untuk shipping workflow otomatis.",
+                "Mengelola PostgreSQL, Redis caching, dan object storage MinIO untuk performa tinggi.",
+                "Menyiapkan CI/CD pipeline dan production deployment ke cloud infrastructure."
             ]
         },
         {
-            title: "Data Analyst - Blockvizo",
-            period: "Jun 2024 - Jul 2025",
+            title: "Backend Engineer — PT Media Inovasi Strategis (GarudaLabs) · Rewrite Web PMII",
+            period: "Des 2025 – Feb 2026 · Remote",
             description: [
-                "Processed 50,000+ game hash history records, examining item drop patterns and building probability-based prediction models that improved forecasting accuracy by 35%.",
-                "Delivered actionable insights through data visualization dashboards, supporting strategic decisions for decentralized projects and reducing analysis time by 40%.",
-                "Specializing in predictive airdrop and winning probability analysis by examining large-scale on-chain data from 10+ Web3 ecosystems"
+                "Melakukan rewrite legacy web PMII dari sistem lama ke backend Golang yang modern dan scalable.",
+                "Migrasi database ke PostgreSQL dengan schema redesign untuk efisiensi query.",
+                "Menyiapkan containerized deployment menggunakan Docker dan CI/CD pipeline.",
+                "Production deployment ke cloud server dengan monitoring dan logging terintegrasi."
             ]
         },
         {
-            title: "Lab Assistant - Programming Lab, Universitas Dian Nuswantoro",
-            period: "Aug 2025 - Present",
+            title: "Full Stack Developer — Plex Seller (ERP Environment)",
+            period: "Okt 2025 · 1 Minggu · Probation",
             description: [
-                "Assisted in over 3 academic lab sessions per week for programming and software development courses.",
-                "Mentored around 110 junior students by guiding them through practical exercises and foundational programming concepts."
+                "Bergabung sebagai probation untuk sistem ERP berbasis Express.js, TypeScript, React.js, dan RabbitMQ.",
+                "Membangun modul chat internal dan mulai integrasi marketplace Lazada.",
+                "Mendapat exposure pada enterprise workflow, message queue, dan asynchronous architecture.",
+                "Resign setelah 1 minggu karena kondisi kesehatan."
             ]
         },
         {
-            title: "Machine Learning Cohort - ASAH (led by Dicoding x Accenture)",
-            period: "Aug 2025 - Jan 2026",
+            title: "Full Stack Web Developer — AFI Sport",
+            period: "Jul 2025 – Agu 2025 · Freelance · Kab. Bojonegoro, Jawa Timur",
             description: [
-                "Served as Project Manager, leading a cross-functional team of 5 machine learning engineers and React developers to build solutions addressing real-world business problems.",
-                "Managing the development of a banking sales prediction portal that improves sales efficiency by prioritizing high-probability leads and reducing time wasted on low-potential prospects.",
-                "Coordinated project timelines, technical discussions, and workflow execution across departments, improving team time efficiency by 70% and ensuring on-time delivery."
+                "Membangun modul pembayaran dan pengiriman untuk sistem e-commerce olahraga berbasis Laravel & MySQL.",
+                "Mengintegrasikan API Midtrans untuk proses transaksi dan API RajaOngkir untuk perhitungan ongkos kirim otomatis.",
+                "Mengoptimalkan proses checkout dan pelacakan pesanan agar lebih efisien dan responsif."
             ]
         },
         {
-            title: "AI Engineer Cohort - PIJAK (led by Dicoding x IBM)",
-            period: "Jan 2026 - Present",
+            title: "Full Stack Web Developer — Alena Soccer",
+            period: "Feb 2025 – Jun 2025 · Kab. Sidoarjo, Jawa Timur",
             description: [
-                "Selected as one of the top talents for an intensive AI Engineering bootcamp focusing on Generative AI, Deep Learning, and Ethics.",
-                "Developing advanced AI solutions using Python, applying industry-standard practices from IBM SkillsBuild curriculum.",
-                "Collaborating on a capstone project to solve real-world challenges through innovative Artificial Intelligence implementation."
+                "Mengembangkan sistem reservasi lapangan futsal end-to-end menggunakan Laravel dan MySQL.",
+                "Mengintegrasikan QRIS Payment Midtrans, Point of Sales (POS), membership, dan laporan keuangan otomatis.",
+                "Mendesain RESTful API untuk komunikasi data antar modul admin dan kasir dengan autentikasi berbasis role.",
+                "Melaksanakan 113 skenario black-box testing dengan hasil 100% sesuai spesifikasi."
+            ]
+        },
+        {
+            title: "Full Stack Web Developer & Team Lead — Badan Pengawas Pemilu Kota Surabaya",
+            period: "Jul 2024 – Agu 2024 · Magang · Kota Surabaya, Jawa Timur",
+            description: [
+                "Membangun sistem E-Library internal berbasis Node.js, Vue.js, dan MySQL yang terintegrasi dengan OwnCloud untuk manajemen dokumen.",
+                "Merancang Rest API internal untuk akses data dokumen dan laporan kegiatan antar departemen.",
+                "Menerapkan Agile Scrum dan memimpin tim kecil dari analisis kebutuhan hingga deployment.",
+                "Berhasil mempercepat proses pengelolaan dokumen dan meningkatkan transparansi organisasi."
             ]
         }
     ],
     techStack: [
-        { name: "Python", category: "Language" },
-        { name: "TensorFlow", category: "Deep Learning" },
-        { name: "PyTorch", category: "Deep Learning" },
-        { name: "React", category: "Frontend" },
-        { name: "Next.js", category: "Frontend" },
+        { name: "Golang", category: "Backend" },
+        { name: "Node.js / Express", category: "Backend" },
+        { name: "Laravel", category: "Backend" },
+        { name: "PHP", category: "Backend" },
+        { name: "RESTful API", category: "Backend" },
+        { name: "RabbitMQ", category: "Backend" },
+        { name: "React.js", category: "Frontend" },
+        { name: "Vue.js", category: "Frontend" },
+        { name: "TypeScript", category: "Frontend" },
         { name: "Tailwind CSS", category: "Frontend" },
         { name: "PostgreSQL", category: "Database" },
-        { name: "Supabase", category: "Backend" },
+        { name: "MySQL", category: "Database" },
+        { name: "Redis", category: "Database" },
         { name: "Docker", category: "DevOps" },
-        { name: "MLOps", category: "Machine Learning Operations" },
-        { name: "Scikit-Learn", category: "Machine Learning" },
-        { name: "OpenCV", category: "Computer Vision" },
-        { name: "FastAPI", category: "Backend" },
-        { name: "Streamlit", category: "ML Deployment" },
-        { name: "Pandas", category: "Data Analysis" },
-        { name: "Matplotlib", category: "Visualization" },
-        { name: "Seaborn", category: "Visualization" },
-        { name: "Keras", category: "Deep Learning" },
-        { name: "Numpy", category: "Data Science" },
-        { name: "Google Gemini", category: "LLM / GenAI" },
-        { name: "RAG", category: "AI Architecture" },
-        { name: "ExpressJS", category: "Backend" },
-        { name: "Microsoft Azure", category: "Cloud" }
+        { name: "GitHub Actions", category: "DevOps" },
+        { name: "CI/CD Pipeline", category: "DevOps" },
+        { name: "Linux Server / VPS", category: "DevOps" },
+        { name: "AWS", category: "Cloud" },
+        { name: "Google Cloud Platform", category: "Cloud" },
+        { name: "MinIO Object Storage", category: "Cloud" },
+        { name: "Cloudflare", category: "Cloud" },
+        { name: "Midtrans / QRIS", category: "Integration" },
+        { name: "Xendit", category: "Integration" },
+        { name: "RajaOngkir", category: "Integration" },
+        { name: "Gin / Echo", category: "Backend" },
+        { name: "Firebase FCM", category: "Integration" }
     ],
     projects: [
         {
-            slug: "diabetes-classification",
-            title: "Diabetes Classification",
-            category: "AI / Machine Learning",
-            description: "Machine Learning model to classify diabetes risk based on medical data."
+            slug: "haji-umroh-store",
+            title: "Haji Umroh Store",
+            category: "Government Project · Backend",
+            description: "Backend API, payment, shipping, object storage, caching, CI/CD, dan deployment ke server government."
         },
         {
-            slug: "leadsup",
-            title: "LeadsUp",
-            category: "AI-Powered Lead Scoring",
-            description: "AI system for scoring sales leads to prioritize high-value prospects."
+            slug: "rewrite-pmii",
+            title: "Rewrite Web PMII",
+            category: "Modernization · Golang",
+            description: "Rewrite legacy system ke backend Golang, database migration PostgreSQL, CI/CD, dan cloud deployment."
         },
         {
-            slug: "polsekrembang",
-            title: "Polsek Rembang Virtual Assistant",
-            category: "RAG Chatbot / AI Assistant",
-            description: "RAG-based chatbot to assist with police station inquiries and services."
+            slug: "plex-seller",
+            title: "Plex Seller ERP",
+            category: "ERP · Enterprise",
+            description: "Chat module, Lazada integration, RabbitMQ, dan asynchronous workflow pada sistem ERP."
         },
         {
-            slug: "floodsegmen",
-            title: "Flood Segmentation Analyzer",
-            category: "Computer Vision",
-            description: "Computer Vision system for analyzing flood patterns and segmentation from satellite/drone imagery."
+            slug: "alena-soccer",
+            title: "Alena Soccer",
+            category: "Fullstack · Laravel",
+            description: "Reservation system, POS, QRIS Payment Midtrans, membership, financial report, dan 113 black-box test scenarios."
         },
         {
-            slug: "qmeal",
-            title: "QMeal E-Kantin",
-            category: "Multi-Vendor Ordering Platform",
-            description: "Digital canteen ordering system supporting multiple vendors and efficient queue management."
+            slug: "elibrary-bawaslu",
+            title: "E-Library Bawaslu",
+            category: "Government · Fullstack",
+            description: "Sistem E-Library internal berbasis Node.js, Vue.js, MySQL, dan OwnCloud untuk Bawaslu Kota Surabaya."
         },
         {
-            slug: "lostandfound",
-            title: "SITEMU Lost & Found Portal",
-            category: "Web Application",
-            description: "Community platform for reporting and finding lost items."
-        },
-        {
-            slug: "imageclas",
-            title: "Vegetable Image Classification",
-            category: "Computer Vision",
-            description: "Deep Learning model for classifying different types of vegetables from images."
-        },
-        {
-            slug: "financial-assistant-bot",
-            title: "Financial Assistant Bot",
-            category: "AI / Fintech",
-            description: "AI bot for personal finance management and advice."
+            slug: "afi-sport",
+            title: "AFI Sport E-Commerce",
+            category: "Fullstack · E-Commerce",
+            description: "E-commerce olahraga dengan integrasi Midtrans, RajaOngkir, checkout optimization, dan order tracking."
         }
     ],
-    achievements: [
+    achievements: [],
+    certifications: [
         {
-            title: "National Finalist - Base Indonesia Hackathon 2025",
-            project: "Base Realms",
-            description: "Built an onchain 16-bit RPG battle game on Base chain with QRIS payment integration, ERC-721/ERC-1155 NFTs, and seasonal reward pools. Onboards non-crypto users through familiar payment methods.",
-            team: "Terra Bit (Firdaus Khotibul Zickrian & Gagah Athallah Fatha)",
-            track: "Base Track",
-            techStack: ["Solidity", "Next.js", "TypeScript", "JavaScript", "CSS"],
-            links: {
-                devfolio: "https://devfolio.co/projects/base-realms-b63a",
-                github: "https://github.com/zickrian/Base-Realms",
-                live: "https://baserealms.app/"
-            }
+            title: "Surat Keterangan Lulus (SKL)",
+            issuer: "UPN \"Veteran\" Jawa Timur",
+            period: "2025",
+            link: "https://drive.google.com/file/d/1hecUFN97rl8K5cKEWEv0GaeI3jWaEDld/view?usp=drive_link"
+        },
+        {
+            title: "Fullstack Web Developer (MSIB Batch 5)",
+            issuer: "GITS Indonesia",
+            period: "2023",
+            link: "https://drive.google.com/file/d/1Cd0bRs_WlPAGYKz0eoJ_ePyeb7eAFNHG/view?usp=drive_link"
+        },
+        {
+            title: "Sertifikat Magang",
+            issuer: "Bawaslu Kota Surabaya",
+            period: "2024",
+            link: "https://drive.google.com/file/d/1VsUzNlzwVKuqeTqKkV4Gr6RsftjT1-gj/view?usp=drive_link"
+        },
+        {
+            title: "Membuat Aplikasi Web dengan Laravel 9",
+            issuer: "Coding Studio",
+            period: "2024",
+            link: "https://drive.google.com/file/d/1twMI-8BtUODWzrP5_Gpdn2g6viv50PJJ/view?usp=drive_link"
+        },
+        {
+            title: "Mahir Membuat DB Aplikasi Profesional (MySQL)",
+            issuer: "Coding Studio",
+            period: "2024",
+            link: "https://drive.google.com/file/d/1aKtV9JwMTKxS1QaxxKixHn9ZQx-Kz2PG/view?usp=drive_link"
+        },
+        {
+            title: "Junior Web Programmer",
+            issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
+            period: "2024 – 2027",
+            link: "https://drive.google.com/file/d/13SSXmCW83MV7CLoNUG_QW_vzLc-lSMnL/view?usp=drive_link"
+        },
+        {
+            title: "Belajar Prinsip Pemrograman SOLID",
+            issuer: "Dicoding",
+            period: "2023 – 2026",
+            link: "https://drive.google.com/file/d/1wpuDdTTNH1RlZxfrJLd10qDxkrj-cq0R/view?usp=drive_link"
         }
+    ],
+    softSkills: [
+        "Agile Scrum",
+        "Team Collaboration",
+        "Problem Solving",
+        "Communication",
+        "Technical Documentation"
     ],
     capabilities: [
-        "Machine Learning",
-        "Deep Learning",
-        "Computer Vision",
-        "Natural Language Processing (NLP)",
-        "Machine Learning Operations (MLOps)",
-        "Data Analysis",
-        "Web Development"
+        "Full Stack Web Development",
+        "Backend API Engineering",
+        "DevOps & Deployment",
+        "Payment Gateway Integration",
+        "Database & Migration",
+        "System Analysis & Documentation"
     ]
 };

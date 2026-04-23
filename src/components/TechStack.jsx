@@ -3,86 +3,92 @@ import { Gsap } from "../utils/gsapAnimate";
 
 // Simple Icons (brand icons) from react-icons
 import {
-    SiPython,
-    SiTensorflow,
-    SiPytorch,
-    SiKeras,
-    SiScikitlearn,
-    SiOpencv,
-    SiStreamlit,
-    SiNumpy,
-    SiPandas,
+    SiGo,
+    SiNodedotjs,
+    SiExpress,
+    SiLaravel,
+    SiPhp,
+    SiRabbitmq,
     SiReact,
-    SiNextdotjs,
+    SiVuedotjs,
+    SiTypescript,
     SiTailwindcss,
-    SiGreensock,
     SiJavascript,
     SiHtml5,
-    SiFastapi,
-    SiExpress,
+    SiBootstrap,
     SiPostgresql,
     SiMysql,
-    SiSupabase,
+    SiRedis,
     SiDocker,
-
-    SiGit,
+    SiGithubactions,
     SiLinux,
-} from "react-icons/si";
+    SiAmazon,
+    SiGooglecloud,
+    SiCloudflare,
+    SiGit
+} from 'react-icons/si';
 
 // Lucide icons for generic concepts
-import { Bot, BrainCircuit, Workflow, Globe, Cloud } from "lucide-react";
+import { Globe, Database, Cpu, Cloud, CreditCard, Send, Box } from 'lucide-react';
 
 const stackCategories = [
     {
-        title: "AI & Machine Learning",
-        description: "Intelligent systems & models",
+        title: 'Backend & API',
+        description: 'Scalable server architectures',
         skills: [
-            { name: "Python", icon: SiPython },
-            { name: "TensorFlow", icon: SiTensorflow },
-            { name: "PyTorch", icon: SiPytorch },
-            { name: "Keras", icon: SiKeras },
-            { name: "Scikit-Learn", icon: SiScikitlearn },
-            { name: "OpenCV", icon: SiOpencv },
-            { name: "Streamlit", icon: SiStreamlit },
-            { name: "Numpy", icon: SiNumpy },
-            { name: "Pandas", icon: SiPandas },
-            { name: "RAG", icon: BrainCircuit },
-            { name: "LLM", icon: Bot },
+            { name: 'Golang', icon: SiGo },
+            { name: 'Node.js', icon: SiNodedotjs },
+            { name: 'Express', icon: SiExpress },
+            { name: 'Laravel', icon: SiLaravel },
+            { name: 'PHP', icon: SiPhp },
+            { name: 'REST APIs', icon: Globe },
+            { name: 'RabbitMQ', icon: SiRabbitmq },
         ]
     },
     {
-        title: "Frontend Eng.",
-        description: "Interactive web interfaces",
+        title: 'Frontend Eng.',
+        description: 'Interactive web interfaces',
         skills: [
-            { name: "React", icon: SiReact },
-            { name: "Next.js", icon: SiNextdotjs },
-            { name: "Tailwind CSS", icon: SiTailwindcss },
-            { name: "GSAP", icon: SiGreensock },
-            { name: "JavaScript", icon: SiJavascript },
-            { name: "HTML/CSS", icon: SiHtml5 },
+            { name: 'React', icon: SiReact },
+            { name: 'Vue.js', icon: SiVuedotjs },
+            { name: 'TypeScript', icon: SiTypescript },
+            { name: 'Tailwind CSS', icon: SiTailwindcss },
+            { name: 'JavaScript', icon: SiJavascript },
+            { name: 'HTML/CSS', icon: SiHtml5 },
+            { name: 'Bootstrap', icon: SiBootstrap },
         ]
     },
     {
-        title: "Backend & API",
-        description: "Scalable server architectures",
+        title: 'Database',
+        description: 'Data storage & caching',
         skills: [
-            { name: "FastAPI", icon: SiFastapi },
-            { name: "ExpressJS", icon: SiExpress },
-            { name: "PostgreSQL", icon: SiPostgresql },
-            { name: "MySQL", icon: SiMysql },
-            { name: "Supabase", icon: SiSupabase },
-            { name: "REST APIs", icon: Globe },
+            { name: 'PostgreSQL', icon: SiPostgresql },
+            { name: 'MySQL', icon: SiMysql },
+            { name: 'Redis', icon: SiRedis },
+            { name: 'Migration', icon: Database },
         ]
     },
     {
-        title: "DevOps & Cloud",
-        description: "Infrastructure & deployment",
+        title: 'DevOps & Cloud',
+        description: 'Infrastructure & deployment',
         skills: [
-            { name: "Docker", icon: SiDocker },
-            { name: "Microsoft Azure", icon: Cloud },
-            { name: "MLOps", icon: Workflow },
-            { name: "Git", icon: SiGit },
-            { name: "Linux", icon: SiLinux },
+            { name: 'Docker', icon: SiDocker },
+            { name: 'GitHub Actions', icon: SiGithubactions },
+            { name: 'Linux Server', icon: SiLinux },
+            { name: 'AWS', icon: SiAmazon },
+            { name: 'GCP', icon: SiGooglecloud },
+            { name: 'MinIO', icon: Box },
+            { name: 'Cloudflare', icon: SiCloudflare },
+        ]
+    },
+    {
+        title: 'Integration',
+        description: 'Payment & services',
+        skills: [
+            { name: 'Midtrans / QRIS', icon: CreditCard },
+            { name: 'Xendit', icon: CreditCard },
+            { name: 'RajaOngkir', icon: Send },
+            { name: 'Firebase FCM', icon: Cloud },
         ]
     }
 ];

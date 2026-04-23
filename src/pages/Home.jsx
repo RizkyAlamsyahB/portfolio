@@ -18,6 +18,7 @@ const TechStack = lazy(() => import('../components/TechStack'));
 const NoiseOverlay = lazy(() => import('../components/NoiseOverlay'));
 const ProfessionalExperience = lazy(() => import('../components/ProfessionalExperience'));
 const TechnicalCapabilities = lazy(() => import('../components/TechnicalCapabilities'));
+const Certifications = lazy(() => import('../components/Certifications'));
 
 export default function Home() {
   const navigate = useNavigate();
@@ -98,6 +99,7 @@ export default function Home() {
       <Suspense fallback={null}><TechStack /></Suspense>
       <Suspense fallback={null}><GitHubStats /></Suspense>
       <Suspense fallback={null}><TechnicalCapabilities /></Suspense>
+      <Suspense fallback={null}><Certifications /></Suspense>
       <Suspense fallback={null}><Footer /></Suspense>
     </div>
   );
