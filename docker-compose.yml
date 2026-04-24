@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   portfolio:
     build:
@@ -11,3 +10,18 @@ services:
       - "8080:80"
     environment:
       - NODE_ENV=production
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  caddy_data:
