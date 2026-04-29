@@ -148,6 +148,12 @@ export const PORTFOLIO_DATA = {
     achievements: [],
     certifications: [
         {
+            title: "Ijazah S1 Sistem Informasi",
+            issuer: "UPN \"Veteran\" Jawa Timur",
+            period: "2025",
+            link: "https://drive.google.com/file/d/1jaBxamQN7f9O4-dGi7A0nCBUNvECMsS1/view?usp=sharing"
+        },
+        {
             title: "Surat Keterangan Lulus (SKL)",
             issuer: "UPN \"Veteran\" Jawa Timur",
             period: "2025",
