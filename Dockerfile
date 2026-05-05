@@ -10,6 +10,10 @@ RUN npm ci
 # Copy the rest of the application files
 COPY . .
 
+# Accept build-time API key (Vite inlines VITE_* vars at build time)
+ARG VITE_GROQ_API_KEY
+ENV VITE_GROQ_API_KEY=$VITE_GROQ_API_KEY
+
 # Build the application for production
 RUN npm run build
 

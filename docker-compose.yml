@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        VITE_GROQ_API_KEY: ${VITE_GROQ_API_KEY}
     container_name: rizky-portfolio
     restart: unless-stopped
     ports:
