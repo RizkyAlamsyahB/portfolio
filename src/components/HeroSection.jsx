@@ -143,7 +143,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
         <div
           className="absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M40 38v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z' fill='%23000000' fill-opacity='1' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M40 38v-4h-4v4h-4v2h4v4h2v-4h4v-2h-4z' stroke='%23000' stroke-width='0.5'/%3E%3C/g%3E%3C/svg%3E")`,
             backgroundPosition: 'center center'
           }}
         />
@@ -151,7 +151,7 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 18% 18%, rgba(163, 230, 53, 0.14), transparent 44%), radial-gradient(circle at 82% 15%, rgba(132, 204, 22, 0.1), transparent 42%), radial-gradient(circle at 50% 85%, rgba(190, 242, 100, 0.09), transparent 50%), linear-gradient(135deg, rgba(163, 230, 53, 0.02), rgba(234, 179, 8, 0.01))'
+            backgroundImage: 'radial-gradient(circle at 18% 18%, rgba(163, 230, 53, 0.14), transparent 44%), radial-gradient(circle at 82% 15%, rgba(132, 204, 22, 0.1), transparent 42%), radial-gradient(circle at 82% 82%, rgba(163, 230, 53, 0.06), transparent 38%)',
           }}
         />
 
@@ -273,14 +273,14 @@ const HeroSection = memo(function HeroSection({ isRevealed = true }) {
         >
           <button
             onClick={() => document.getElementById('project-section')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group flex items-center gap-2 bg-black text-white px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider hover:bg-lime-400 hover:text-black transition-all duration-300 cursor-pointer"
+            className="group flex items-center gap-2 bg-black text-white px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider hover:bg-lime-400 hover:text-black transition-all duration-300 cursor-pointer rounded"
           >
             View Projects <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </button>
           <a
-            href="/CV_Rizky_Alamsyah_Bimantara.pdf"
-            download="CV_Rizky_Alamsyah_Bimantara.pdf"
-            className="group flex items-center gap-2 bg-transparent text-black border-2 border-black px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider hover:bg-black hover:text-lime-400 transition-all duration-300"
+            href="/CV_RIZKY ALAMSYAH BIMANTARA.pdf"
+            download="CV_RIZKY ALAMSYAH BIMANTARA.pdf"
+            className="group flex items-center gap-2 bg-transparent text-black border-2 border-black px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider hover:bg-black hover:text-lime-400 transition-all duration-300 rounded"
           >
             Download CV <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
           </a>
